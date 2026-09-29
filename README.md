@@ -14,12 +14,12 @@ O botão **Verificar atualizações** do InkFlow para Windows consulta as releas
 
 ## Histórico de versões
 
-### 0.1.3 — Setup Windows
+### 0.1.3 — correções do instalador
 
-- Assistente no tamanho exato da galeria (980 × 620), sem a borda preta, com ícone visível e tipografia ampliada.
-- Termos com formatação real de títulos, negrito, listas e links; botões arredondados com hover completo.
-- A versão anterior é detectada no início da instalação e removida com confirmação, sem uma tela ou lista de desinstalação separada; as lousas são preservadas.
-- Corrigida a linha de comando elevada do MSI para evitar o erro 1639 em caminhos com espaços.
+- Corrigido o erro 1639, que podia interromper a instalação e abrir a ajuda do Windows Installer.
+- O instalador agora detecta versões anteriores compatíveis e permite atualizá-las sem desinstalação manual, preservando os arquivos das lousas.
+- A janela do instalador agora aparece no tamanho correto, sem a borda preta, com ícone visível, textos mais legíveis e botões sem cortes.
+- Os termos de uso agora são exibidos com títulos, negrito, listas e links formatados para facilitar a leitura.
 
 ### 0.1.2 — Setup Windows
 
