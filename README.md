@@ -14,6 +14,13 @@ O botão **Verificar atualizações** do InkFlow para Windows consulta as releas
 
 ## Histórico de versões
 
+### 0.1.3 — Setup Windows
+
+- Assistente no tamanho exato da galeria (980 × 620), sem a borda preta, com ícone visível e tipografia ampliada.
+- Termos com formatação real de títulos, negrito, listas e links; botões arredondados com hover completo.
+- A versão anterior é detectada no início da instalação e removida com confirmação, sem uma tela ou lista de desinstalação separada; as lousas são preservadas.
+- Corrigida a linha de comando elevada do MSI para evitar o erro 1639 em caminhos com espaços.
+
 ### 0.1.2 — Setup Windows
 
 - Termos completos em etapa exclusiva, com rolagem e aceite antes das opções.
@@ -35,4 +42,4 @@ O botão **Verificar atualizações** do InkFlow para Windows consulta as releas
 
 - Primeira distribuição do InkFlow para Windows e do companion Android.
 
-As alterações detalhadas da versão também constam na [descrição da release 0.1.2](https://github.com/PC-Calixto/InkFlow-Releases/releases/tag/v0.1.2).
+As alterações detalhadas da versão também constam na [descrição da release 0.1.3](https://github.com/PC-Calixto/InkFlow-Releases/releases/tag/v0.1.3).
