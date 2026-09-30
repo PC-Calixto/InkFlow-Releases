@@ -1,45 +1,61 @@
 # InkFlow — downloads
 
-O InkFlow é uma lousa digital para Windows com aplicativo companion para tablet Android. Este repositório reúne os instaladores e os arquivos usados nas atualizações do Windows.
+O InkFlow é uma lousa digital para Windows com aplicativo companion para tablets Android. Esta página reúne os instaladores e arquivos de atualização.
 
-## Instalar no Windows
+## Windows
 
 1. Abra a [versão mais recente](https://github.com/PC-Calixto/InkFlow-Releases/releases/latest) e baixe **Setup.exe**.
-2. Leia e aceite os termos na etapa própria do assistente. Se ele encontrar uma versão anterior, confirme a remoção; o Setup a desinstala e continua a instalação automaticamente, preservando as lousas.
-3. Confirme a autorização do Windows quando solicitada.
+2. Leia e aceite os termos no assistente. Se houver uma instalação anterior reconhecida, confirme a substituição; o Setup a remove e continua com a instalação nova, preservando as lousas.
+3. Autorize a instalação quando o Windows solicitar. Ao concluir, escolha se deseja abrir o InkFlow.
 
-O arquivo `InkFlow-X.Y.Z-x64.msi` é uma alternativa para implantação administrativa. `Setup.exe.sha256` permite conferir a integridade do instalador baixado. No PowerShell, compare o valor do arquivo com o resultado de `Get-FileHash .\Setup.exe -Algorithm SHA256`.
+O arquivo `InkFlow-X.Y.Z-x64.msi` é uma alternativa para implantação administrativa. Use `Setup.exe.sha256` para conferir a integridade do Setup.
 
-O botão **Verificar atualizações** do InkFlow para Windows consulta as releases deste repositório. O companion Android não se atualiza pelo GitHub: a instalação de um APK compatível no tablet é manual. O APK de teste da 0.1.1 ainda não é um pacote Android de distribuição pública.
+O botão **Verificar atualizações** no aplicativo Windows consulta as releases deste repositório.
+
+## Android
+
+Baixe **InkFlow-0.1.5-Android.apk** na [versão mais recente](https://github.com/PC-Calixto/InkFlow-Releases/releases/latest), abra o arquivo no tablet e confirme a instalação quando o Android solicitar. A atualização do companion é manual; os dados da lousa permanecem sincronizados com o computador.
 
 ## Histórico de versões
 
-### 0.1.3 — correções do instalador
+### 0.1.5 — Windows e Android
 
-- Corrigido o erro 1639, que podia interromper a instalação e abrir a ajuda do Windows Installer.
-- O instalador agora detecta versões anteriores compatíveis e permite atualizá-las sem desinstalação manual, preservando os arquivos das lousas.
-- A janela do instalador agora aparece no tamanho correto, sem a borda preta, com ícone visível, textos mais legíveis e botões sem cortes.
-- Os termos de uso agora são exibidos com títulos, negrito, listas e links formatados para facilitar a leitura.
+- O leitor de PDF permite reabrir o último arquivo na página em que a leitura parou e ir diretamente a uma página pelo número.
+- Imagens e páginas importadas mantêm a posição e as proporções ao sincronizar entre tablet e computador.
+- O tablet ganhou controles para pausar e retomar vídeos do YouTube no computador, avançar ou voltar alguns segundos e alternar legendas.
+- Ao substituir uma instalação anterior, o Setup remove a versão antiga sem abri-la antes de instalar a nova.
 
-### 0.1.2 — Setup Windows
+### 0.1.4 — Windows
 
-- Termos completos em etapa exclusiva, com rolagem e aceite antes das opções.
-- Opções e lista de instalações anteriores acessíveis em janelas menores, sem esconder os controles do assistente.
-- Remoção confirmada da versão anterior e continuação automática da instalação.
-- Limpeza segura de registros órfãos, preservando arquivos e lousas.
-- Fundo translúcido do Setup integrado ao visual do InkFlow.
+- O nível de zoom é sincronizado entre o computador e o tablet.
+- A sessão atual é preservada ao fechar o aplicativo, com opção de continuar o trabalho na próxima abertura.
+- A edição de texto mantém a caixa selecionada ao clicar fora; um novo clique cria outra caixa e o duplo clique reabre a edição.
+- No Windows, atalhos de teclado permitem copiar, recortar, colar e excluir itens da lousa.
+- As miniaturas das páginas são atualizadas após mudanças no conteúdo.
+- O assistente de instalação passou a ser uma janela nativa do Windows.
 
-### 0.1.1 — correções
+### 0.1.3 — instalação no Windows
 
-- A escrita no tablet apresenta o traço imediatamente e só suaviza a linha quando a caneta deixa a tela. A gravação local espera uma pausa curta entre letras para reduzir travamentos.
-- A pauta ganhou mais espaço entre linhas, e a lousa do tablet aceita zoom por pinça com dois dedos.
-- Caixas de texto mantêm posição, largura e altura ao sincronizar entre Windows e tablet. A edição não desenha duas cópias do texto nem reduz a caixa criada.
-- No Windows, um duplo clique com o ponteiro abre a caixa de texto para edição. O texto pronto fica contido nos limites da caixa.
-- No Android, o marca-texto colore o texto durante a seleção e sincroniza a marcação com o Windows.
-- O instalador Windows foi reformulado para identificar instalações anteriores e oferecer a remoção com cópia de segurança das lousas guardadas na pasta antiga.
+- Corrigido um erro que podia interromper a instalação e abrir a ajuda do Windows Installer.
+- O Setup passou a reconhecer instalações anteriores compatíveis e atualizar o InkFlow sem exigir uma remoção manual.
+- A janela do instalador ganhou dimensões corretas, ícone visível, textos legíveis e botões sem cortes.
+- Os termos de uso passaram a ser exibidos com títulos, negrito, listas e links formatados.
+
+### 0.1.2 — instalação no Windows
+
+- Os termos completos passaram a ser exibidos em uma etapa própria, com rolagem e aceite antes da instalação.
+- Opções e instalações anteriores podem ser consultadas em janelas menores sem esconder os controles.
+- A remoção de registros antigos preserva os arquivos e as lousas existentes.
+
+### 0.1.1 — escrita e sincronização
+
+- O traço no tablet aparece imediatamente e só é suavizado depois que a caneta deixa a tela.
+- A pauta ganhou mais espaço entre linhas e a lousa aceita zoom por pinça.
+- Caixas de texto mantêm posição e dimensões ao sincronizar entre Windows e tablet.
+- O marca-texto colore o texto durante o arraste e sincroniza a marcação.
 
 ### 0.1.0 — versão inicial
 
-- Primeira distribuição do InkFlow para Windows e do companion Android.
+- Primeira distribuição do InkFlow para Windows e Android.
 
-As alterações detalhadas da versão também constam na [descrição da release 0.1.3](https://github.com/PC-Calixto/InkFlow-Releases/releases/tag/v0.1.3).
+Veja também o [código-fonte](https://github.com/PC-Calixto/InkFlow) e o [histórico detalhado](https://github.com/PC-Calixto/InkFlow/blob/main/CHANGELOG.md).
